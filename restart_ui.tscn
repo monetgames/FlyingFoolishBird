@@ -1,0 +1,164 @@
+[gd_scene load_steps=24 format=3 uid="uid://b6iarc3dc12h4"]
+
+[ext_resource type="Script" uid="uid://n7v7k6prbcpm" path="res://script/restart_ui.gd" id="1_j3wa6"]
+[ext_resource type="Texture2D" uid="uid://c23k7q7jhf5jq" path="res://aseprite/fireworks1.png" id="2_dgkgd"]
+[ext_resource type="FontFile" uid="uid://v4gegclfo01d" path="res://fonts/MonaSans-Bold.ttf" id="2_uxvtu"]
+[ext_resource type="Texture2D" uid="uid://mafamhgagxux" path="res://aseprite/fireworks2.png" id="3_0ip18"]
+[ext_resource type="Texture2D" uid="uid://cjsbu5eg4udpy" path="res://aseprite/fireworks3.png" id="4_3ys58"]
+[ext_resource type="Texture2D" uid="uid://dvtrhn7wgij6o" path="res://aseprite/fireworks4.png" id="5_rocf3"]
+[ext_resource type="Texture2D" uid="uid://djyeyqdiwp1wr" path="res://aseprite/fireworks5.png" id="6_c00tf"]
+[ext_resource type="Texture2D" uid="uid://dlhsjdkyui05n" path="res://aseprite/fireworks6.png" id="7_4loa0"]
+[ext_resource type="Texture2D" uid="uid://d0s5axey2qww5" path="res://aseprite/fireworks7.png" id="8_4htdb"]
+[ext_resource type="Texture2D" uid="uid://clor7a417irfh" path="res://aseprite/fireworks8.png" id="9_87b3m"]
+[ext_resource type="Texture2D" uid="uid://dw2plicoebbj8" path="res://aseprite/fireworks9.png" id="10_dl7or"]
+[ext_resource type="Texture2D" uid="uid://dljnl1a5bgwnc" path="res://aseprite/fireworks10.png" id="11_53l3s"]
+[ext_resource type="Texture2D" uid="uid://ddl3in6ygeff7" path="res://aseprite/fireworks11.png" id="12_83etn"]
+[ext_resource type="Texture2D" uid="uid://bave738tcf2h3" path="res://aseprite/fireworks12.png" id="13_4jpl7"]
+[ext_resource type="Texture2D" uid="uid://c2yseimg2gf6k" path="res://aseprite/fireworks13.png" id="14_deh4x"]
+[ext_resource type="Texture2D" uid="uid://dvby62aur4t4w" path="res://aseprite/fireworks14.png" id="15_rsi1x"]
+[ext_resource type="Texture2D" uid="uid://cfm7t5gukta00" path="res://aseprite/fireworks15.png" id="16_2j2a5"]
+[ext_resource type="Texture2D" uid="uid://dem41e8vg73is" path="res://aseprite/fireworks16.png" id="17_wewwx"]
+[ext_resource type="Texture2D" uid="uid://cnku634lju4es" path="res://aseprite/fireworks17.png" id="18_gkjmx"]
+[ext_resource type="Texture2D" uid="uid://6s5v8hed5xc2" path="res://aseprite/fireworks18.png" id="19_l36vk"]
+[ext_resource type="Texture2D" uid="uid://dw1c6spd41rpw" path="res://aseprite/fireworks19.png" id="20_lxsqk"]
+[ext_resource type="Texture2D" uid="uid://eo7rblla1xbn" path="res://aseprite/fireworks20.png" id="21_8h2hi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2t55m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dgkgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0ip18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3ys58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rocf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c00tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4loa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4htdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_87b3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_dl7or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_53l3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_83etn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4jpl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_deh4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rsi1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2j2a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wewwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gkjmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l36vk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lxsqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8h2hi")
+}],
+"loop": true,
+"name": &"fireworks",
+"speed": 10.0
+}]
+
+[node name="RestartUI" type="CanvasLayer"]
+script = ExtResource("1_j3wa6")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 800.0
+offset_bottom = 600.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FireworksAnimation" type="AnimatedSprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(400, 300)
+sprite_frames = SubResource("SpriteFrames_2t55m")
+animation = &"fireworks"
+frame_progress = 0.970106
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -104.5
+offset_bottom = 104.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultMessageLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+self_modulate = Color(0.898039, 0.360784, 0.423529, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxvtu")
+theme_override_font_sizes/font_size = 30
+text = "成功！勤能补拙，笨鸟先飞！"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxvtu")
+theme_override_font_sizes/font_size = 22
+text = "分数：0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_uxvtu")
+theme_override_font_sizes/font_size = 22
+text = "关卡：1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="RestartButton" type="Button" parent="VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_uxvtu")
+theme_override_font_sizes/font_size = 22
+text = "重新尝试"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/RestartButton" to="." method="_on_restart_button_pressed"]

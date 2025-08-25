@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://cvhe7k2dbngmj"]
+
+[ext_resource type="Script" uid="uid://x11etw5nbgx8" path="res://script/Bug.gd" id="1_3un4j"]
+[ext_resource type="Texture2D" uid="uid://dw4onhvia3uxu" path="res://aseprite/bug1.png" id="1_7thvx"]
+[ext_resource type="Texture2D" uid="uid://c00qopvtkf1im" path="res://aseprite/bug2.png" id="2_k6c3x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03sev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7thvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_k6c3x")
+}],
+"loop": true,
+"name": &"bug_crawl",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kwmi"]
+size = Vector2(14, 15)
+
+[node name="Bug" type="RigidBody2D"]
+gravity_scale = 0.0
+linear_damp_mode = 1
+script = ExtResource("1_3un4j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_03sev")
+animation = &"bug_crawl"
+frame_progress = 0.613203
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.8, 0.9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6kwmi")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

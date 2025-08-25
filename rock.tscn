@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvynow3sx11sx"]
+
+[ext_resource type="Script" uid="uid://6qqq77i64bxk" path="res://script/Rock.gd" id="1_rwx0k"]
+[ext_resource type="Texture2D" uid="uid://b3wshsejou3ac" path="res://aseprite/rock_ai.png" id="2_68h2w"]
+
+[node name="Rock" type="RigidBody2D"]
+collision_mask = 0
+gravity_scale = 0.0
+linear_damp_mode = 1
+script = ExtResource("1_rwx0k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 3.8147e-06)
+scale = Vector2(1, 0.9)
+texture = ExtResource("2_68h2w")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7, -220, 10, -220, 28, -168, 46, 146, 44, 184, 29, 212, 1, 218, -29, 192, -45, 148, -26, -170)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
