@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://v4gegclfo01d"
-path="res://.godot/imported/MonaSans-Bold.ttf-53fddd4bec3827558501ef1f41184034.fontdata"
+uid="uid://8s7gv30ubpol"
+path="res://.godot/imported/SmileySans-Oblique.ttf-71c82877f2188c0f5afad86ea7a19f98.fontdata"
 
 [deps]
 
-source_file="res://fonts/MonaSans-Bold.ttf"
-dest_files=["res://.godot/imported/MonaSans-Bold.ttf-53fddd4bec3827558501ef1f41184034.fontdata"]
+source_file="res://fonts/SmileySans-Oblique.ttf"
+dest_files=["res://.godot/imported/SmileySans-Oblique.ttf-71c82877f2188c0f5afad86ea7a19f98.fontdata"]
 
 [params]
 

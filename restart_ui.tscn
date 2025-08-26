@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://n7v7k6prbcpm" path="res://script/restart_ui.gd" id="1_j3wa6"]
 [ext_resource type="Texture2D" uid="uid://c23k7q7jhf5jq" path="res://aseprite/fireworks1.png" id="2_dgkgd"]
-[ext_resource type="FontFile" uid="uid://v4gegclfo01d" path="res://fonts/MonaSans-Bold.ttf" id="2_uxvtu"]
 [ext_resource type="Texture2D" uid="uid://mafamhgagxux" path="res://aseprite/fireworks2.png" id="3_0ip18"]
 [ext_resource type="Texture2D" uid="uid://cjsbu5eg4udpy" path="res://aseprite/fireworks3.png" id="4_3ys58"]
 [ext_resource type="Texture2D" uid="uid://dvtrhn7wgij6o" path="res://aseprite/fireworks4.png" id="5_rocf3"]
@@ -22,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://6s5v8hed5xc2" path="res://aseprite/fireworks18.png" id="19_l36vk"]
 [ext_resource type="Texture2D" uid="uid://dw1c6spd41rpw" path="res://aseprite/fireworks19.png" id="20_lxsqk"]
 [ext_resource type="Texture2D" uid="uid://eo7rblla1xbn" path="res://aseprite/fireworks20.png" id="21_8h2hi"]
+[ext_resource type="FontFile" uid="uid://8s7gv30ubpol" path="res://fonts/SmileySans-Oblique.ttf" id="23_0ip18"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2t55m"]
 animations = [{
@@ -116,17 +116,21 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -104.5
-offset_bottom = 104.5
+offset_top = -121.0
+offset_bottom = 121.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResultMessageLabel" type="Label" parent="VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 30
+
+[node name="ResultMessageLabel" type="Label" parent="VBoxContainer/MarginContainer2"]
 unique_name_in_owner = true
 self_modulate = Color(0.898039, 0.360784, 0.423529, 1)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uxvtu")
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("23_0ip18")
+theme_override_font_sizes/font_size = 38
 text = "成功！勤能补拙，笨鸟先飞！"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -134,8 +138,8 @@ vertical_alignment = 1
 [node name="ScoreLabel" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uxvtu")
-theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("23_0ip18")
+theme_override_font_sizes/font_size = 26
 text = "分数：0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -143,8 +147,8 @@ vertical_alignment = 1
 [node name="LevelLabel" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_uxvtu")
-theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("23_0ip18")
+theme_override_font_sizes/font_size = 26
 text = "关卡：1"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -157,8 +161,25 @@ theme_override_constants/margin_top = 30
 custom_minimum_size = Vector2(140, 60)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_uxvtu")
-theme_override_font_sizes/font_size = 22
+theme_override_fonts/font = ExtResource("23_0ip18")
+theme_override_font_sizes/font_size = 26
 text = "重新尝试"
+
+[node name="CopyrightLabel" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -32.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.156863)
+theme_override_fonts/font = ExtResource("23_0ip18")
+theme_override_font_sizes/font_size = 22
+text = "Copyright (c)  2025  Monet  Games  "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/RestartButton" to="." method="_on_restart_button_pressed"]

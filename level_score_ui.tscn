@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtlo6joggcmlf"]
 
 [ext_resource type="Script" uid="uid://c2evrvq3k8c2a" path="res://script/level_score_ui.gd" id="1_nxauy"]
-[ext_resource type="FontFile" uid="uid://v4gegclfo01d" path="res://fonts/MonaSans-Bold.ttf" id="2_n2bco"]
+[ext_resource type="FontFile" uid="uid://8s7gv30ubpol" path="res://fonts/SmileySans-Oblique.ttf" id="2_n2bco"]
 
 [node name="LevelScoreUI" type="CanvasLayer"]
 script = ExtResource("1_nxauy")
@@ -13,6 +13,7 @@ offset_right = 78.0
 offset_bottom = 46.0
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_n2bco")
+theme_override_font_sizes/font_size = 20
 text = "关卡：1"
 
 [node name="ScoreLabel" type="Label" parent="."]
@@ -22,6 +23,7 @@ offset_right = 84.0
 offset_bottom = 76.0
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_n2bco")
+theme_override_font_sizes/font_size = 20
 text = "分数：0"
 
 [node name="SpeedLabel" type="Label" parent="."]
@@ -31,4 +33,5 @@ offset_right = 84.0
 offset_bottom = 106.0
 size_flags_vertical = 1
 theme_override_fonts/font = ExtResource("2_n2bco")
+theme_override_font_sizes/font_size = 20
 text = "速度：0"

@@ -5,3 +5,5 @@ android/
 release/
 export_presets.cfg
 config
+docs/
+README.md

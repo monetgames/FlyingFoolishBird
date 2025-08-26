@@ -11,12 +11,21 @@ config_version=5
 [application]
 
 config/name="Flying Foolish Bird"
+config/name_localized={
+"zh_CN": "笨鸟先飞"
+}
+config/version="1.0"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://dw7ck8nr0lyhk"
+config/icon="uid://bhpi4osdtnp8b"
 
 [display]
 
 window/size/viewport_width=800
 window/size/viewport_height=600
 window/size/resizable=false
+window/stretch/mode="canvas_items"
+
+[internationalization]
+
+locale/locale_filter_mode=1
