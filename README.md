@@ -11,3 +11,9 @@
 * [开源独立游戏《笨鸟先飞》 1 游戏设计](./docs/FlyingFoolishBird1.md)
 * [开源独立游戏《笨鸟先飞》 2 美术、音效、字体](/docs/FlyingFoolishBird2.md)
 * [开源独立游戏《笨鸟先飞》 3 程序开发](./docs/FlyingFoolishBird3.md)
+
+## 关于
+
+微信公众号：莫奈奈。
+
+![莫奈奈](./docs/pictures/qrcode_for_monetgames.jpg)
