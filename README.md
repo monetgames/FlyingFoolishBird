@@ -4,7 +4,7 @@
 
 ## 试玩
 
-<iframe frameborder="0" src="https://itch.io/embed/3839496" width="552" height="167"><a href="https://monetgames.itch.io/flying-foolish-bird">笨鸟先飞 by monetgames</a></iframe>
+<a href="https://monetgames.itch.io/flying-foolish-bird"><img src="https://itch.io/embed/3839496" width="552" height="167"></a>
 
 ## 文档
 
