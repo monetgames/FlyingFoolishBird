@@ -4,7 +4,7 @@
 
 ## 试玩
 
-<a href="https://monetgames.itch.io/flying-foolish-bird"><img src="https://itch.io/embed/3839496" width="552" height="167"></a>
+<a href="https://monetgames.itch.io/flying-foolish-bird"><img src="./docs/pictures/itch.io.jpg" width="552" height="167"></a>
 
 ## 文档
 
